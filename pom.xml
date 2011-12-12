@@ -24,7 +24,6 @@
 			<artifactId>log4j</artifactId>
 			<version>1.2.16</version>
 		</dependency>
-		
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
@@ -33,20 +32,10 @@
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
-			<groupId>antlr</groupId>
-			<artifactId>antlr</artifactId>
-			<version>2.7.7</version>
-			<type>jar</type>
-		</dependency>
-
-		
-		<dependency>
 			<groupId>sata</groupId>
 			<artifactId>servlet-api</artifactId>
 			<version>5.5.23</version>
 			<type>jar</type>
-			<scope>system</scope>
-			<systemPath>c:\Program Files\Apache Software Foundation\apache-tomcat-6.0.35\lib\servlet-api.jar</systemPath>
 		</dependency>
 		
 		<dependency>
@@ -54,21 +43,19 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.6</version>
 			<type>jar</type>
-			<scope>compile</scope>
 		</dependency>
 	</dependencies>
 
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.apache.tomcat.maven</groupId>
-				<artifactId>tomcat6-maven-plugin</artifactId>
-				<version>2.0-SNAPSHOT</version>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>tomcat-maven-plugin</artifactId>
+				<version>1.1</version>
 				<configuration>
-					<systemProperties>
-						<example.value.1>alpha</example.value.1>
-						<example.value.2>beta</example.value.2>
-					</systemProperties>
+					<url>http://localhost:8080/manager/html</url>
+					<username>test</username>
+					<password>test</password>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -83,53 +70,6 @@
 					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
-			<plugin>
-                        <groupId>org.codehaus.cargo</groupId>
-                        <artifactId>cargo-maven2-plugin</artifactId>
-                        <version>1.0.1-sr-1</version>
-                        <configuration>
-                            <wait>false</wait>
-                            <container>
-                                <containerId>tomcat6x</containerId>
-                                <zipUrlInstaller>
-                                    <url>
-                                        http://www.apache.org/dist/tomcat/tomcat-6/v6.0.35/bin/apache-tomcat-6.0.35.zip
-                                    </url>
-                                </zipUrlInstaller>
-                                <log>${project.build.directory}/tomcat.log</log>
-                                <timeout>120000</timeout>
-                            </container>
-                            <configuration>
-                                <deployables>
-                                    <deployable>
-                                        <groupId>com.example.application</groupId>
-                                        <artifactId>server</artifactId>
-                                        <type>war</type>
-                                        <pingURL>http://localhost:8080/server</pingURL>
-                                        <properties>
-                                            <context>server</context>
-                                        </properties>
-                                    </deployable>
-                                </deployables>
-                            </configuration>
-                        </configuration>
-                        <executions>
-                            <execution>
-                                <id>start-container</id>
-                                <phase>pre-integration-test</phase>
-                                <goals>
-                                    <goal>start</goal>
-                                </goals>
-                            </execution>
-                            <execution>
-                                <id>stop-container</id>
-                                <phase>post-integration-test</phase>
-                                <goals>
-                                    <goal>stop</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
 		</plugins>
 	</build>
 </project>
