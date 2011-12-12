@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE LibraryIndex SYSTEM "LibraryIndex.dtd">
+<xs:schema id="LibraryIndex"  xmlns:xs="http://www.w3.org/2001/XMLSchema" >
+  <xs:element name="LibraryIndex" >
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="RedirectLinks">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Link" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="key" type="xs:string"  />
+                    <xs:element name="value" type="xs:string"  />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FileLibraryPath">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Path" >
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="target" type="xs:string"  />
+                    <xs:element name="location" type="xs:string"  />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema> 

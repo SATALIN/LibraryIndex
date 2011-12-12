@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library>
+	<id>1</id>
+	<title>Xml_Library</title>
+	<books>
+		<book>
+			<id>1</id>
+			<author>Pushkin</author>
+			<title>Gold fish</title>
+			<abonent>1</abonent>
+			<date>12.12.1990</date>
+		</book>
+		
+		<book>
+			<id>2</id>
+			<author>Pushkin</author>
+			<title>Zolushka</title>
+			<abonent>1</abonent>
+			<date>13.12.1998</date>
+		</book>
+	</books>
+</library>

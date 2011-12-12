@@ -1,0 +1,32 @@
+# Global logging configuration
+log4j.rootLogger=ALL, stdout, file
+
+# Console output...
+log4j.appender.stdout=org.apache.log4j.ConsoleAppender
+log4j.appender.stdout.layout=org.apache.log4j.PatternLayout
+log4j.appender.stdout.layout.ConversionPattern=%5p - %m%n
+
+# File output
+log4j.appender.file=org.apache.log4j.RollingFileAppender
+log4j.appender.file.MaxFileSize=1024KB
+log4j.appender.file.MaxBackupIndex=7
+
+log4j.appender.file.File=LibraryIndex.log
+log4j.appender.file.ImmediateFlush=true
+log4j.appender.file.Append=false
+log4j.appender.file.layout=org.apache.log4j.PatternLayout
+log4j.appender.file.layout.ConversionPattern=%p [%t] [%d{dd MMM yyyy HH:mm:ss,SSS}] - %m%n
+### set log levels - for more verbose logging change 'info' to 'debug' ##
+log4j.rootLogger=debug, file, stdout
+log4j.logger.java.sql.Connection=ERROR
+log4j.logger.java.sql.Statement=ERROR
+log4j.logger.java.sql.PreparedStatement=ERROR
+log4j.logger.java.sql.ResultSet=ERROR
+log4j.logger.org.hibernate=ERROR
+
+log4j.logger.org.springframework.transaction=ERROR
+log4j.logger.org.springframework.orm=ERROR
+log4j.logger.org.springframework=INFO
+# Control logging for Struts
+log4j.logger.org.apache.struts=WARN
+log4j.logger.org.apache.commons=ERROR

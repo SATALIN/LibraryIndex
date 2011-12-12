@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LibraryIndex   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ 				xsi:noNamespaceSchemaLocation="SimpleLibraryIndex.xsd" >
+<RedirectLinks>
+	<Link>
+		<key>LIST</key>
+		<value>/pages/libraryDo/listLibrary.jsp</value>
+	</Link>
+	<Link>
+		<key>FIND</key>
+		<value>/pages/libraryDo/findBook.jsp</value>
+	</Link>
+	<Link>
+		<key>RETURN</key>
+		<value>/pages/libraryDo/findBook.jsp</value>
+	</Link>
+	<Link>
+		<key>ORDER</key>
+		<value>/pages/libraryDo/findBook.jsp</value>
+	</Link>
+	<Link>
+		<key>CREATEUSER</key>
+		<value>/pages/userDo/createUser.jsp</value>
+	</Link>
+	<Link>
+		<key>EDITUSER</key>
+		<value>/pages/userDo/editUser.jsp</value>
+	</Link>
+		<Link>
+		<key>GETUSER</key>
+		<value>/pages/userDo/editUser.jsp</value>
+	</Link>
+		<Link>
+		<key>DELETEUSER</key>
+		<value>/pages/userDo/listUser.jsp</value>
+	</Link>
+		<Link>
+		<key>LISTUSER</key>
+		<value>/pages/userDo/listUser.jsp</value>
+	</Link>
+			<Link>
+		<key>LIST_LIBRARIES</key>
+		<value>/pages/libraryDo/listLibrary.jsp</value>
+	</Link>
+			<Link>
+		<key>ERROR</key>
+		<value>/pages/error.jsp</value>
+	</Link>
+			<Link>
+		<key>LOGIN</key>
+		<value>/index.jsp</value>
+	</Link>
+</RedirectLinks>
+<FileLibraryPath>
+	<Path>
+		<target>ALL</target>
+		<location>D:/SATALIN/temp/index/</location>
+	</Path>
+</FileLibraryPath>
+</LibraryIndex>

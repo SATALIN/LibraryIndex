@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT LibraryIndex (RedirectLinks, FileLibraryPath)*>
+<!ELEMENT RedirectLinks (Link*)>
+<!ELEMENT Link (key, value)*>
+<!ELEMENT key (#PCDATA)>
+<!ELEMENT value (#PCDATA)>
+<!ELEMENT FileLibraryPath (Path*)>
+<!ELEMENT Path (target, location)*>
+<!ELEMENT target (#PCDATA)>
+<!ELEMENT location (#PCDATA)>
+

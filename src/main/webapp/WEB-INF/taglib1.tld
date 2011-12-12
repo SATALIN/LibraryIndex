@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.1//EN" "http://java.sun.com/j2ee/dtds/web-jsptaglibrary_1_1.dtd">
+
+<taglib>
+<tlibversion>2.0</tlibversion>
+<jspversion>1.1</jspversion>
+<shortname>escape</shortname>
+<uri>http://www.servletsuite.com/servlets/escape</uri>
+<info>HTML escape</info>
+
+<tag>
+<name>Escape</name>
+<tagclass>com.cj.escape.Escape</tagclass>
+<bodycontent>JSP</bodycontent>
+<info>HTML escape</info>
+</tag>
+
+<tag>
+<name>UnEscape</name>
+<tagclass>com.cj.escape.UnEscape</tagclass>
+<bodycontent>JSP</bodycontent>
+<info>HTML unescape</info>
+</tag>
+
+
+<tag>
+<name>WmlEscape</name>
+<tagclass>com.cj.escape.WmlEscape</tagclass>
+<bodycontent>JSP</bodycontent>
+<info>HTML-WML convertor</info>
+
+<attribute>
+<name>url</name>
+<required>false</required>
+<rtexprvalue>true</rtexprvalue>
+</attribute>
+
+<attribute>
+<name>dir</name>
+<required>false</required>
+<rtexprvalue>true</rtexprvalue>
+</attribute>
+
+</tag>
+
+</taglib>
